@@ -1,0 +1,14 @@
+[run]
+branch = True
+source = .
+omit = 
+    ./myvenv/*
+    */tests.py
+    manage.py
+    */migrations/*
+    mysite/wsgi.py
+
+[report]
+fail_under = 100
+show_missing = True
+skip_covered = True

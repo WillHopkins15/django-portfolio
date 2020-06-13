@@ -7,3 +7,10 @@ db.sqlite3
 /static
 .DS_Store
 geckodriver.log
+
+# Coverage files
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
