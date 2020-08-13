@@ -71,6 +71,19 @@ class BasicSiteTest(unittest.TestCase):
         self.assertEqual(title.text, 'Test Title - Edit')
         self.assertEqual(text.text, 'Test Text - Edit')
 
+    def test_cv(self):
+        # Go to home page
+        self.browser.get('http://127.0.0.1:8000/')
+        self.assertIn('William Hopkins', self.browser.title)
+
+        # Click on cv button in header
+        self.browser.find_element_by_class_name('cv').click()
+        self.assertEqual(self.browser.current_url, 'http://127.0.0.1:8000/cv/')
+
+        # I can view my cv on this page
+        # Click the cv editor button
+        # I edit my cv
+        # I see that my cv has been updated
 
 if __name__ == '__main__':
     unittest.main()
