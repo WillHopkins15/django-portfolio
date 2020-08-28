@@ -1,1 +1,38 @@
 {% extends 'cv/base.html' %}
+
+{% block content %}
+    <h1>{{ cv.name }}</h1>
+    <p>{{ cv.curr_employment }}</p>
+    <h3>Address</h3>
+    <p>{{ cv.address }}</p>
+    <h3>Phone</h3>
+    <p>{{ cv.phone }}</p>
+    <h3>Email</h3>
+    <p>{{ cv.email }}</p>
+    <h3>Links</h3>
+    {% for link in cv.links %}
+        <p>{{ link }}</p>
+    {% endfor %}
+    <h3>Skills</h3>
+    {% for skill in cv.skills %}
+        <p>{{ skill }}</p>
+    {% endfor %}
+    <h3>Hobbies</h3>
+    {% for hobby in cv.hobbies %}
+        <p>{{ hobby }}</p>
+    {% endfor %}
+    <h3>Profile</h3>
+    <p>{{ cv.profile }}</p>
+    <h3>Employment History</h3>
+    {% for item in cv.employment_hist %}
+        <p>{{ item }}</p>
+    {% endfor %}
+    <h3>Education</h3>
+    {% for edu in cv.education %}
+        <p>{{ edu }}</p>
+    {% endfor %}
+    <h3>References</h3>
+    {% for reference in cv.references %}
+        <p>{{ reference }}</p>
+    {% endfor %}
+{% endblock %}

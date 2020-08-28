@@ -77,10 +77,22 @@ class BasicSiteTest(unittest.TestCase):
         self.assertIn('William Hopkins', self.browser.title)
 
         # Click on cv button in header
-        self.browser.find_element_by_class_name('cv').click()
+        self.browser.find_element_by_class_name('glyphicon-file').click()
         self.assertEqual(self.browser.current_url, 'http://127.0.0.1:8000/cv/')
 
-        # I can view my cv on this page
+        # I can view my cv on this page, I see there is:
+        ''' 
+        My name 
+        My current employment
+        An info section (address, phone no, email etc)
+        A links section
+        A skills section
+        A Hobbies section
+        A profile section
+        An employment hisory section
+        An education section
+        A references section
+        ''' 
         # Click the cv editor button
         # I edit my cv
         # I see that my cv has been updated

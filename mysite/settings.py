@@ -76,10 +76,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'djport',
+        'USER': 'will',
+        'PASSWORD': 'poppy2000',
+        'HOST': 'localhost',
+        'PORT': '',
     }
-}
+}   
 
 
 # Password validation
@@ -121,5 +125,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static_prod"),
+    os.path.join(BASE_DIR, "global_static"),
 ]

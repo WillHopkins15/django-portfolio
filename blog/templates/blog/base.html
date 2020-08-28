@@ -12,9 +12,9 @@
         <div class="page-header">
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <a href="{% url 'cv_view' %}" class="top-menu"><span class="glyphicon glyphicon-file"></span></a>
-        {% endif %}            
-        <h1><a href="/">Django Girls Blog</a></h1>
+        {% endif %}  
+        <a href="{% url 'cv_view' %}" class="top-menu"><span class="glyphicon glyphicon-file"></span></a>
+        <h1><a href="/">William Hopkins</a></h1>
         </div>
         <div class="content container">
             <div class="row">
