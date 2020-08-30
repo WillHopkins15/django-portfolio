@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
+from django_mysql.models import JSONField
 
 class Cv(models.Model):
     name = models.CharField(max_length=30)
@@ -8,13 +8,13 @@ class Cv(models.Model):
     address = models.CharField(max_length=50)
     phone = models.CharField(max_length=11)
     email = models.EmailField()
-    links = ArrayField(models.CharField(max_length=30))
-    skills = ArrayField(models.CharField(max_length=30))
-    hobbies = ArrayField(models.CharField(max_length=30))
+    links = JSONField()
+    skills = JSONField()
+    hobbies = JSONField()
     profile = models.CharField(max_length=2000)
-    employment_hist = ArrayField(models.CharField(max_length=100))
-    education = ArrayField(models.CharField(max_length=100))
-    references = ArrayField(models.CharField(max_length=100))
+    employment_hist = JSONField()
+    education = JSONField()
+    references = JSONField()
 
     def publish(self):
         self.save()

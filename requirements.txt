@@ -1,4 +1,5 @@
 Django~=2.2.4
 Coverage~=5.1
 selenium~=3.141.0
-psycopg2-binary~=2.8.5
+django-mysql~=3.8.1
+mysqlclient~=2.0.1

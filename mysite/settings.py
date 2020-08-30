@@ -76,14 +76,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'djport',
         'USER': 'will',
-        'PASSWORD': 'poppy2000',
+        'PASSWORD': 'will1507',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '3306',
+        'TEST': {
+            'NAME': 'will$test_djport',
+        }
     }
-}   
+}
 
 
 # Password validation
